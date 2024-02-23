@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>В какой университет США ты бы поступил?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>В какой университет США ты бы поступил?</h1>
+        <form id="surveyForm" enctype="multipart/form-data">
+            <div class="question">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="question">
+                <label for="email">Электронная почта:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="question">
+                <label for="phone">Мобильный телефон:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="question">
+                <label for="plans">Планы поступления:</label>
+                <select id="plans" name="plans" required>
+                    <option value="Ближайшее время">Да, в ближайшем будущем</option>
+                    <option value="Через несколько лет">Да, но через несколько лет</option>
+                    <option value="Не решил(а)">Еще не решил(а)</option>
+                    <option value="Не в моих планах">Нет, это не входит в мои планы</option>
+                </select>
+            </div>
+            <div class="question">
+                <label for="programs">Какие образовательные программы вас интересуют?</label>
+                <select id="plans" name="plans" required>
+                    <option value="Гуманитарные науки">Гуманитарные науки</option>
+                    <option value="Технические науки">Технические науки</option>
+                    <option value="Естественные науки">Естественные науки</option>
+                    <option value="Бизнес и менеджмент">Бизнес и менеджмент</option>
+                </select> 
+                
+            </div>
+            <div class="question">
+                <label>Какие факторы важны при выборе университета в США?</label>
+                <label><input type="checkbox" name="factors[]" value="Репутация"> Репутация университета</label>
+                <label><input type="checkbox" name="factors[]" value="Стоимость"> Стоимость обучения</label>
+                <label><input type="checkbox" name="factors[]" value="Расположение"> Расположение университета</label>
+                <label><input type="checkbox" name="factors[]" value="Стипендии"> Наличие стипендий и финансовой поддержки</label>
+                <label><input type="checkbox" name="factors[]" value="Программа"> Специфика программы обучения</label>
+            </select> 
+            </div>
+            <div class="image-question">
+                <label for="campusImages">Как вы представляете кампус своей мечты?</label>
+                <div class="image-container">
+                    <img src="https://www.isbos.org/uploaded/themes/2015_map/images/Boston_Landmarks/HarvardUniversity.jpg" alt="Harvard University">
+                    <img src="https://cdn.britannica.com/25/121725-050-8BF363EC/Hoover-Tower-Stanford-University-California.jpg" alt="Stanford University">
+                    <img src="https://static01.nyt.com/images/2023/06/06/multimedia/06NAT-COLUMBIA-01-fcgj/06NAT-COLUMBIA-01-fcgj-videoSixteenByNine3000.jpg" alt="Columbia University">
+                </div>
+            </div>
+            <div class="question">
+    
+                <textarea id="openQuestion" name="openQuestion" rows="4" cols="50" placeholder="Введите ваш ответ здесь..."></textarea>
+            </div>
+            <div class="question">
+                <label for="selfie">Загрузите свое селфи:</label>
+                <input type="file" id="selfie" name="selfie" accept="image/*" required>
+            </div>
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
