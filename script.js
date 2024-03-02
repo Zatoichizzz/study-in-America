@@ -19,11 +19,10 @@ function sendTelegramMessage(message) {
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             console.log('Сообщение успешно отправлено в телеграм');
-            // После успешной отправки формы обновляем страницу или выводим сообщение об успешной отправке
-            alert('Спасибо! Ваша заявка успешно отправлена.');
-            // window.location.reload(); // Раскомментируйте эту строку, если хотите автоматически обновить страницу после отправки формы
+            window.location.href = 'https://www.instagram.com/uib_team/';
         } else {
             console.error('Произошла ошибка при отправке в телеграм:', xhr.status);
+            alert('Спасибо! Ваша заявка успешно отправлена! Подпишитесь на наш Instagram!');
         }
     };
 
@@ -46,7 +45,19 @@ document.getElementById('surveyForm').addEventListener('submit', function(event)
         Факторы выбора университета: ${formData.getAll('factors[]').join(', ')}
         Ответ на открытый вопрос: ${formData.get('openQuestion')}
     `;
+    
+    const image = formData.get('selfie');
 
     // Отправляем сообщение в телеграм
     sendTelegramMessage(message);
+});
+const themeToggleBtn = document.getElementById('theme-toggle-btn');
+const body = document.body;
+
+themeToggleBtn.addEventListener('change', function() {
+    if (this.checked) {
+        body.classList.add('dark-theme');
+    } else {
+        body.classList.remove('dark-theme');
+    }
 });
