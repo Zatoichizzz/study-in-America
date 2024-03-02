@@ -287,7 +287,21 @@ button[type="submit"]:hover {
     transition: color 0.3s ease-in-out; /* Плавное изменение цвета в течение 0.3 секунды */
 }
 /* Пример стилей для мобильных устройств */
-@media screen and (max-width: 768px) 
+@media screen and (max-width: 768px) {
+    /* Пример анимации для кнопки отправки формы */
+    button[type="submit"] {
+        animation: pulse 1s infinite alternate;
+    }
+
+    @keyframes pulse {
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(1.1);
+        }
+    }
+
     /* Пример изменения размера текста для заголовка */
     h1 {
         font-size: 24px;
