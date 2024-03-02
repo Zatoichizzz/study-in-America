@@ -9,6 +9,18 @@
 <body>
     <div class="container">
         <h1>В какой университет США ты бы поступил?</h1>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/uib_team/" target="_blank" class="instagram-icon"></a>
+            <a href="https://www.instagram.com/studyamerica/" target="_blank" class="instagram-icon"></a>
+        </div>
+        <div class="theme-toggle">
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle-btn">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        
+        
         <form id="surveyForm" enctype="multipart/form-data">
             <div class="question">
                 <label for="name">Имя:</label>
@@ -33,13 +45,12 @@
             </div>
             <div class="question">
                 <label for="programs">Какие образовательные программы вас интересуют?</label>
-                <select id="plans" name="plans" required>
+                <select id="programs" name="programs" required>
                     <option value="Гуманитарные науки">Гуманитарные науки</option>
                     <option value="Технические науки">Технические науки</option>
                     <option value="Естественные науки">Естественные науки</option>
                     <option value="Бизнес и менеджмент">Бизнес и менеджмент</option>
-                </select> 
-                
+                </select>
             </div>
             <div class="question">
                 <label>Какие факторы важны при выборе университета в США?</label>
@@ -48,7 +59,6 @@
                 <label><input type="checkbox" name="factors[]" value="Расположение"> Расположение университета</label>
                 <label><input type="checkbox" name="factors[]" value="Стипендии"> Наличие стипендий и финансовой поддержки</label>
                 <label><input type="checkbox" name="factors[]" value="Программа"> Специфика программы обучения</label>
-            </select> 
             </div>
             <div class="image-question">
                 <label for="campusImages">Как вы представляете кампус своей мечты?</label>
@@ -59,18 +69,17 @@
                 </div>
             </div>
             <div class="question">
-    
                 <textarea id="openQuestion" name="openQuestion" rows="4" cols="50" placeholder="Введите ваш ответ здесь..."></textarea>
             </div>
             <div class="question">
                 <label for="selfie">Загрузите свое селфи:</label>
                 <input type="file" id="selfie" name="selfie" accept="image/*" required>
             </div>
-            <button type="submit">Отправить</button>
+            <div class="button-container">
+                <button type="submit">Отправить</button>
+            </div>
         </form>
     </div>
-
-    <!-- Ссылка на JavaScript файл -->
     <script src="script.js"></script>
 </body>
 </html>
