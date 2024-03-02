@@ -18,17 +18,6 @@ body {
     animation: fadeIn 1s ease-in-out;
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 h1 {
     font-family: 'Roboto', Arial, sans-serif;
     color: #2d7722;
@@ -40,17 +29,7 @@ h1 {
 
 .question {
     margin-bottom: 30px;
-    opacity: 0;
-    animation: fadeInQuestion 1s ease-in-out forwards;
-}
-
-@keyframes fadeInQuestion {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    animation: fadeInUp 1s ease-in-out;
 }
 
 .question label {
@@ -58,7 +37,6 @@ h1 {
     margin-bottom: 10px;
     font-size: 18px;
     color: #555;
-    transition: color 0.3s ease-in-out;
 }
 
 input[type="text"],
@@ -71,20 +49,6 @@ select {
     border-radius: 5px;
     border: 1px solid #ccc;
     margin-bottom: 15px;
-    transition: border-color 0.3s, box-shadow 0.3s;
-    opacity: 0;
-    animation: fadeInInput 1s ease-in-out forwards;
-}
-
-@keyframes fadeInInput {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 input[type="text"]:focus,
@@ -100,51 +64,22 @@ select:focus {
     text-align: center;
 }
 
-button {
+button[type="submit"] {
     background-color: #2d7722;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 15px 30px;
     cursor: pointer;
-    font-family: 'Roboto', Arial, sans-serif;
     border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
-    opacity: 0;
-    animation: fadeInButton 1s ease-in-out forwards;
 }
 
-@keyframes fadeInButton {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-button:hover {
+.button-container button[type="submit"]:hover {
     background-color: #0056b3;
-    transform: translateY(-2px);
 }
 
 .image-question {
     text-align: center;
     margin-bottom: 30px;
-    opacity: 0;
-    animation: fadeInImage 1s ease-in-out forwards;
-}
-
-@keyframes fadeInImage {
-    0% {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .image-container {
@@ -164,4 +99,344 @@ button:hover {
 
 .image-container img:hover {
     transform: scale(1.1);
+}
+
+.social-icons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.instagram-icon {
+    background-image: url('https://i.pinimg.com/originals/af/28/f3/af28f32a5178c88865da7ceaa5d6f74f.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.instagram-icon:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Стили для заголовка */
+h1 {
+    font-size: 36px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Стили для формы */
+.question {
+    margin-bottom: 30px;
+}
+
+.question label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: calc(100% - 30px);
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #2d7722;
+    box-shadow: 0 0 5px rgba(45, 119, 34, 0.5);
+}
+
+/* Стили для кнопки */
+button[type="submit"] {
+    background-color: #2d7722;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+/* Стили для формы */
+form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.question label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: calc(100% - 20px);
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #2d7722;
+    box-shadow: 0 0 5px rgba(45, 119, 34, 0.5);
+}
+
+/* Стили для кнопки */
+button[type="submit"] {
+    background-color: #2d7722;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+.image-container img:hover {
+    transform: scale(1.05) rotate(3deg);
+    transition: transform 0.3s ease-in-out;
+}
+.question label:hover {
+    color: #ff0000; /* Изменяем цвет текста на красный */
+    transition: color 0.3s ease-in-out; /* Плавное изменение цвета в течение 0.3 секунды */
+}
+/* Пример стилей для мобильных устройств */
+@media screen and (max-width: 768px) {
+    /* Пример анимации для кнопки отправки формы */
+    button[type="submit"] {
+        animation: pulse 1s infinite alternate;
+    }
+
+    @keyframes pulse {
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(1.1);
+        }
+    }
+
+    /* Пример изменения размера текста для заголовка */
+    h1 {
+        font-size: 24px;
+    }
+
+    /* Пример изменения размера текста для элементов формы */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select {
+        font-size: 14px;
+    }
+}
+/* Пример адаптивных стилей для мобильных устройств */
+@media screen and (max-width: 768px) {
+    /* Изменяем размеры изображений */
+    .image-container img {
+        width: 150px;
+    }
+
+    /* Уменьшаем отступы между элементами формы */
+    .question {
+        margin-bottom: 15px;
+    }
+
+    /* Изменяем размер текста для ссылок */
+    .social-icons a {
+        font-size: 18px;
+    }
+
+    /* Добавляем анимацию для социальных иконок */
+    .social-icons a {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Анимация при наведении на социальные иконки */
+    .social-icons a:hover {
+        transform: scale(1.1);
+    }
+}
+/* Стили для переключателя */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+/* Дополнительные стили для темной темы */
+.dark-theme {
+    background-color: #222; /* Цвет фона */
+    color: #ddd; /* Цвет текста */
+}
+
+.dark-theme .container {
+    background-color: rgba(255, 255, 255, 0.1); /* Цвет контейнера */
+    color: #ddd; /* Цвет текста */
+}
+
+.dark-theme .question label,
+.dark-theme input[type="text"],
+.dark-theme input[type="email"],
+.dark-theme input[type="tel"],
+.dark-theme textarea,
+.dark-theme select {
+    border-color: #ddd; /* Цвет рамки для текстовых полей и текстовой области */
+    background-color: rgba(255, 255, 255, 0.1); /* Цвет фона для текстовых полей и текстовой области */
+    color: #333; /* Цвет текста для текстовых полей и текстовой области */
+}
+
+.dark-theme .slider {
+    background-color: #bbb; /* Цвет фона для переключателя */
+}
+
+.dark-theme .slider:before {
+    background-color: #ddd; /* Цвет фона для маркера переключателя */
+}
+
+.dark-theme .social-icons a {
+    filter: brightness(1.5); /* Увеличение яркости для иконок социальных сетей */
+}
+h1 {
+    font-family: 'Arial', sans-serif; /* Новый шрифт */
+    color: #2d7722; /* Цвет текста */
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    animation: fadeIn 1s ease-in-out;
+    text-transform: uppercase; /* Преобразование текста в верхний регистр */
+    letter-spacing: 2px; /* Межбуквенное расстояние */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Подложка */
 }
